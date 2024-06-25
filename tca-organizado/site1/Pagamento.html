@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main-style.css">
+    <title>Selecione o método de pagamento:</title>
+</head>
+<body>
+    <div class="Pagamento">
+        <h1>Selecione o método de pagamento:</h1>
+        <form id="paymentForm">
+            <label>
+                <input type="radio" id="pix" name="paymentMethod" value="pix">
+                <label for="pix">PIX</label><br>
+                <a href="proximaPagina.html">
+                 
+                </a>
+            </label>
+            <label>
+                <input type="radio" id="debit" name="paymentMethod" value="debit">
+                <label for="debit">Cartão de Débito</label><br>
+                <a href="proximaPagina.html">
+                
+                </a>
+            </label>
+            <label>
+                <input type="radio" id="credit" name="paymentMethod" value="credit">
+                <label for="credit">Cartão de Crédito</label><br>
+                <a href="proximaPagina.html">
+                 
+                </a>
+            </label>
+                <input type="radio" id="boleto" name="paymentMethod" value="boleto">
+                <label for="boleto">Boleto Bancário</label><br><br>
+                
+                 <div class ="Pagar" > </div>
+                <button type="submit">Pagar</button> 
+        </form>
+    </div>
+    <script>
+        document.getElementById("paymentForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita o comportamento padrão de envio do formulário
+    
+            // Verifica se o carrinho de compras está vazio
+            var carrinhoDeComprasVazio = (document.getElementById("cart-items").children.length === 0);
+    
+            if (carrinhoDeComprasVazio) {
+                alert("Seu carrinho de compras está vazio. Adicione itens antes de finalizar a compra.");
+            } else {
+                var selectedPaymentMethod = document.querySelector('input[name="paymentMethod"]:checked').value;
+    
+                // Aqui você pode adicionar a lógica para cada método de pagamento
+                switch (selectedPaymentMethod) {
+                    case "pix":
+                        alert("Seu pagamento com PIX será processado!");
+                        break;
+                    case "debit":
+                        alert("Seu pagamento com cartão de débito será processado!");
+                        break;
+                    case "credit":
+                        alert("Seu pagamento com cartão de crédito será processado!");
+                        break;
+                    case "boleto":
+                        alert("Seu boleto será gerado!");
+                        break;
+                    default:
+                        alert("Por favor, selecione um método de pagamento.");
+                        break;
+                }
+            }
+        });
+    </script>
+    

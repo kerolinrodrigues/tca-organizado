@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>KL Doces</title> 
+        <meta charset="UTF-8">
+        <meta name="googlebot" content="all"> 
+        <meta name="description" content="A sweet website">
+        <meta name="keywords" content="candy, sweet, candy website">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="main-style.css"> 
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+        <link rel="icon" href="images/fundo-de-doce.jpg" type="images/fundo-de-doce.jpg">
+    </head>
+    <body>
+        <header>
+            <div class="header-title-container apply-font">   
+                <a href="#" id="header-title">KL Doces</a>  
+            </div>
+            <nav>
+                <form id="paymentForm">    
+                </form>
+                <a href="#section-four-container">Sobre Nós</a>   
+                <a href="#section-four-container">Contato</a>    
+                <a href="Pagamento.html"><button id="submit-btn"class="styled-button">Finalizar compra</button></a>
+                
+            </nav>
+            <div id="cart-container">
+                <div id="cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cart-item-count">0</span>
+                <div id="cart-items" class="cart-items fixed-cart-items">
+                   
+                </div>
+                <span id="total" class="total fixed-cart-total">Total: $0.00</span>
+              
+             <button id="hide-cart-button">Ocultar carrinho</button> 
+      
+            <button id="show-cart-button" style="display: none;">Mostrar carrinho</button>    
+   </div>   
+            </div>
+        </header>       
+        <main>
+            <section id="one-section-container">  
+                <div class="primeira-image">
+                    <div class="primeira-image-content apply-font">
+                        <h1>Bem vindo a KL Doces</h1>  
+                   
+                    </div>
+                </div>
+            </section>
+            <section id="second-section-container"> 
+                <aside id="first-aside-container"> 
+                    <div class="second-section-content">
+                        <div>
+                            <i class="fas fa-users"></i>
+                            <p>Estamos à disposição para ajudar</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-plane-departure"></i>
+                            <p>Enviamos Para Todo Brasil</p>
+                        </div>
+                        <div>
+                            <i class="fas fa-money-check"></i>
+                            <p>Muitos métodos de pagamento</p> 
+                        </div>   
+                    </div>
+                </aside>
+
+                <aside id="second-aside-container">
+                    <form id="searchForm">
+                        <input type="text" id="searchInput" placeholder="Pesquisar...">
+                        <button type="submit">Pesquisar</button>
+                        <button type="button" id="clearButton">Limpar</button>
+                    </form>
+                </aside>
+                    <div id="list-items-one">
+                         <div class="item">
+                           <!--  <img id="Pacote de Bala" src="images/Pacote de Balas.webp" onmouseover="trocarImagem('Pacote de Bala', 'images/bala-unidade2.webp')" onmouseout="restaurarImagem('Pacote de Bala', 'images/Pacote de Balas.webp')" alt="Pacote de Bala"> -->
+                            <div class="item-lore">
+                              <!--  <p>Pacote de Balas - Pacote 500g</p> 
+                                <p>$4.99</p>     
+                               <button class="custom-button" onclick="adicionarProdutoAoCarrinho('Pacote de Balas', 4.99 ,this)">Adicionar ao carrinho</button> -->
+                            </div>
+                        </div>
+                    </div>
+                       
+            <section id="section-three-container">  
+                <div class="three-image apply-font">
+                    <h2>Doces</h2>  
+                </div>
+            </section>
+        </main>  
+
+        <footer> 
+           <section id="section-four-container"> 
+                <div class="logo-field">
+                    <h2>Clientes</h2>   
+                    <p>Bem-vindo à nossa doçura online! Navegue pela nossa seleção e descubra os doces mais saborosos que vão alegrar o seu dia. Desfrute da comodidade de fazer compras sem sair
+                         de casa. Estamos aqui para adoçar sua vida, um doce de cada vez!</p>  
+
+                <div class="informando-field">
+                    <h2>Informação</h2>
+                    <p>Somos uma loja de doces online apaixonada por criar momentos de doçura e felicidade para nossos clientes. Explore nosso catálogo e descubra uma ampla seleção de doces artesanais. Na KL Doces, a conveniência é fundamental. Estamos aqui para ajudar! Entre em contato conosco se tiver alguma dúvida.</p>
+               </div>
+                </div>
+                
+                <div class="about-us-field">   
+                    <h2>Sobre nós</h2>  
+                    <p> Descubra nossa seleção premium de doces para garantir um sabor excepcional. Faça seu pedido em poucos cliques e deixe-nos adoçar seu dia com entrega direta na sua porta.</p> 
+
+                      <h1>Contato</h1>
+                      <p>Se surgir alguma dúvida, estamos prontos para ajudar. Entre em contato conosco: <span class="contato-number">5199878906</span> </p>
+                    
+                </div>          
+           </section>
+        </footer>   
+        <script src="https://kit.fontawesome.com/866e7f0be4.js" crossorigin="anonymous"></script> 
+        <script src="script.js"></script>
+    </body>
+</html>
