@@ -49,7 +49,7 @@
  adicionarProduto("Ovo de páscoa - 200g Ao Leite", 20.99, "images/ovodepascoa.webp", "images/ovodepascoa2.jpeg");    // Adicione mais produtos conforme necessário
  
       // exibi os produtos na página
- function exibirProdutos() {
+ function exibirProdutos() { 
      var produtosDiv = document.getElementById('list-items-one');
  
      // limpa o conteúdo atual da div de produtos
@@ -123,16 +123,12 @@
      exibirProdutos();
  };
             
- 
-        
- 
  // chama a função para exibir os produtos ao carregar a página
  window.onload = function() {
      exibirProdutos();
  };
  
- 
- 
+
  // inicializa uma variável 'carrinho' como uma matriz vazia para armazenar os itens do carrinho.
  let carrinho = [];
  let total = 0;
@@ -371,17 +367,21 @@
      });
  });
  
- document.getElementById("list-items-one").addEventListener("click", function() {
-     // limpa o campo de pesquisa
-     document.getElementById("searchInput").value = "";
- 
-     // ostra todos os produtos novamente
-     var products = document.querySelectorAll(".item");
-     products.forEach(function(product) {
-         product.style.display = "flex";
-     });
- });
- 
+ //  botão "Limpar" pelo ID
+const clearButton = document.getElementById('clearButton');
+
+// adiciona um ouvinte de evento para o evento de clique no botão "Limpar"
+clearButton.addEventListener('click', function() {
+    // define o valor do campo de pesquisa como uma string vazia
+    document.getElementById('searchInput').value = '';
+
+    // mostra todos os produtos novamente
+    var products = document.querySelectorAll('.item');
+    products.forEach(function(product) {
+        product.style.display = 'flex';
+    });
+});
+
  /* document.getElementById('item').addEventListener('submit', function(event) {
     event.preventDefault();
     
