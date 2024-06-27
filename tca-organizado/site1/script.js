@@ -1,10 +1,10 @@
 
  // lista de produtos
- var products = [];
+ var produtos = [];
 
  // Função para adicionar produtos à lista
  function adicionarProduto(nome, preco, imagem, imagemOver) {
-     products.push({ name: nome, price: preco, image: imagem, imagemOver : imagemOver });
+     produtos.push({ name: nome, price: preco, image: imagem, imagemOver : imagemOver });
  }
  
  // Adicionar produtos à lista
@@ -56,7 +56,7 @@
      produtosDiv.innerHTML = '';
  
      // itera sobre os produtos e cria elementos para cada um
-     products.forEach(function(product) {
+     produtos.forEach(function(product) {
          // Cria um elemento div para representar o produto
          var divProduto = document.createElement('div');
          divProduto.classList.add('item'); // Adiciona a classe 'item' ao elemento
@@ -104,9 +104,9 @@
          // adiciona o elemento da div do produto à div de produtos
          produtosDiv.appendChild(divProduto);
  
-          // adiciona o botão "Adicionar ao carrinho"
+          // adiciona o botão "carrinho"
           var botaoAdicionar = document.createElement('button');
-          botaoAdicionar.textContent = 'Adicionar ao carrinho';
+          botaoAdicionar.textContent = 'Adicionar ao Carrinho';
           botaoAdicionar.classList.add('add-to-cart-button'); // adiciona a classe 'add-to-cart-button' ao elemento
           // adiciona um evento de clique ao botão para chamar a função adicionarProdutoAoCarrinho()
           botaoAdicionar.addEventListener('click', function() {
@@ -118,11 +118,6 @@
           produtosDiv.appendChild(divProduto);
      });
  }
- // chama a função para exibir os produtos ao carregar a página
- window.onload = function() {
-     exibirProdutos();
- };
-            
  // chama a função para exibir os produtos ao carregar a página
  window.onload = function() {
      exibirProdutos();
@@ -245,26 +240,26 @@
  // função para tornar o carrinho fixo no topo da página
  function tornarCarrinhoFixoNoTopo() {
     const cart = document.getElementById('cart');
-    const hideButton = document.getElementById('hide-cart-button');
+    const ocutarbutton = document.getElementById('hide-cart-button');
 
     // adiciona a classe 'fixed-cart-container' ao carrinho para torná-lo fixo no topo
     cart.classList.toggle('fixed-cart-container');
 
     // verifica se a classe 'fixed-cart-container' está presente no carrinho
-    const isFixed = cart.classList.contains('fixed-cart-container');
+    const DeixarFixo = cart.classList.contains('fixed-cart-container');
 
-    if (isFixed) {
+    if (DeixarFixo) {
         // define o carrinho como fixo no topo
         cart.style.position = 'fixed';
         cart.style.top = '200px';
         cart.style.right = '20px'; // Aqui você pode ajustar conforme necessário
         cart.style.marginTop = '0'; // remove o marginTop quando o carrinho for fixado
-        hideButton.textContent = 'Ocultar carrinho'; // Altera o texto do botão
+        ocutarbutton.textContent = 'Ocultar carrinho'; // Altera o texto do botão
     } else {
         // remove a posição fixa do carrinho
         cart.style.position = 'static';
         cart.style.marginTop = '150px'; // Adiciona margem superior
-        hideButton.textContent = 'Mostrar carrinho'; // Restaura o texto do botão
+        ocutarbutton.textContent = 'Mostrar carrinho'; // Restaura o texto do botão
     }
 }
 
@@ -277,7 +272,7 @@
  // função para verificar a posição do carrinho e mostrar o botão "Mostrar carrinho" quando estiver no topo
  function verificarPosicaoCarrinho() {
      const cart = document.getElementById('cart');
-     const hideButton = document.getElementById('hide-cart-button');
+     const ocutarbutton = document.getElementById('hide-cart-button');
      const cartTop = cart.getBoundingClientRect().top;
  
  }
@@ -349,10 +344,10 @@
      var searchTerm = document.getElementById("searchInput").value.toLowerCase();
  
      // seleciona todos os itens de produto
-     var products = document.querySelectorAll(".item");
+     var produtos = document.querySelectorAll(".item");
  
      // itera sobre cada item de produto
-     products.forEach(function(product) {
+     produtos.forEach(function(product) {
          // captura o texto do produto
          var productText = product.innerText.toLowerCase();
          
@@ -376,8 +371,8 @@ clearButton.addEventListener('click', function() {
     document.getElementById('searchInput').value = '';
 
     // mostra todos os produtos novamente
-    var products = document.querySelectorAll('.item');
-    products.forEach(function(product) {
+    var produtos = document.querySelectorAll('.item');
+    produtos.forEach(function(product) {
         product.style.display = 'flex';
     });
 });
